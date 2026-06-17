@@ -82,6 +82,7 @@
       ]
     }
   },
+  "bin": "dist/cli.cjs.js",
   "files": [
     "dist/*",
     "index.js",
