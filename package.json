@@ -5,8 +5,8 @@
     "example:vue": "pnpm -F vue-example dev",
     "build": "rollup -c rollup.config.build.mjs",
     "publish": "node ./scripts/publish.mjs",
-    "bumpp": "pnpm -F @zd~/request bumpp",
-    "doc": "npx typedoc --out docs src/index.ts",
+    "bumpp": "pnpm -F @zdecode/request bumpp",
+    "doc": "pnpm -F @zdecode/request doc",
     "clean": "rm -rf node_modules pnpm-lock.yaml packages/*/node_modules packages/*/pnpm-lock.yaml packages/*/dist"
   },
   "devDependencies": {
@@ -27,6 +27,6 @@
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-terser": "^7.0.2",
-    "typescript": "^5.5.4"
+    "typescript": "^6.0.3"
   }
 }

@@ -48,6 +48,6 @@
   ],
   "cSpell.words": [
     "tarojs"
-  ]
-  // "typescript.tsdk": "example\\uni-example\\node_modules\\typescript\\lib"
+  ],
+  "js/ts.tsdk.path": "node_modules\\typescript\\lib"
 }
