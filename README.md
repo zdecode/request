@@ -1,4 +1,4 @@
-@zd~/request ![npm version](https://img.shields.io/npm/v/@zd~/request.svg)
+@zdecode/request ![npm version](https://img.shields.io/npm/v/@zdecode/request.svg)
 
 一个简单的请求库封装，支持web/uni-app/原生微信小程序
 
@@ -21,12 +21,12 @@
 
 > web
 
-1. 安装依赖 `axios` `qs` `@zd~/request`
+1. 安装依赖 `axios` `qs` `@zdecode/request`
 
 ```shell
-npm i axios qs @zd~/request
-yarn add axios qs @zd~/request
-pnpm add axios qs @zd~/request
+npm i axios qs @zdecode/request
+yarn add axios qs @zdecode/request
+pnpm add axios qs @zdecode/request
 ```
 
 2. 声明自定义参数：
@@ -43,7 +43,7 @@ export interface CustomConfig {
 3. 实例化
 
 ```ts
-import { HttpRequest } from '@zd~/request'
+import { HttpRequest } from '@zdecode/request'
 export const request = new HttpRequest<CustomConfig>({
   baseURL: import.meta.env.VITE_APP_API_URL,
   withToken: true, // 默认值
@@ -131,12 +131,12 @@ const res2 = await login(data) // ==> AxiosResponse<ResponseResult<Api.LoginResp
 
 > uni-app / 微信小程序
 
-1. 安装依赖 `@zd~/request`
+1. 安装依赖 `@zdecode/request`
 
 ```shell
-npm i @zd~/request
-yarn add @zd~/request
-pnpm add @zd~/request
+npm i @zdecode/request
+yarn add @zdecode/request
+pnpm add @zdecode/request
 ```
 
 2. 声明自定义参数：
@@ -153,12 +153,12 @@ export interface CustomConfig {
 3. 实例化
 
 > [!IMPORTANT]
-> 请使用 `import { UniRequest } from '@zd~/request/uni'` 而不是 `import { UniRequest } from '@zd~/request'` 导入<br>微信小程序同理 使用 `import { WxRequest } from '@zd~/request/wx'` 而不是 `import { WxRequest } from '@zd~/request'` 导入
+> 请使用 `import { UniRequest } from '@zdecode/request/uni'` 而不是 `import { UniRequest } from '@zdecode/request'` 导入<br>微信小程序同理 使用 `import { WxRequest } from '@zdecode/request/wx'` 而不是 `import { WxRequest } from '@zdecode/request'` 导入
 
 ```ts
-import { UniRequest } from '@zd~/request/uni'
+import { UniRequest } from '@zdecode/request/uni'
 // 微信小程序
-// import { WxRequest } from '@zd~/request/wx'
+// import { WxRequest } from '@zdecode/request/wx'
 
 export const request = new UniRequest<HttpRequestUserConfig>({
   baseUrl: '',

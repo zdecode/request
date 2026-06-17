@@ -1,4 +1,4 @@
-# @zd~/Request
+# @zdecode/request
 
 统一API风格的跨平台请求库，支持Web/微信小程序/uni-app/Taro。
 
@@ -10,12 +10,12 @@ import type { AxiosRequestConfig, Canceler } from 'axios'
 import axios, { AxiosError } from 'axios'
 import { saveAs } from 'file-saver'
 import { isObject, merge } from 'lodash-es'
-import type { HttpRequestConfig, ResponseResult } from '@zd~/request/http'
+import type { HttpRequestConfig, ResponseResult } from '@zdecode/request/http'
 import {
   ContentTypeEnum,
   HttpRequest,
   RequestMethodsEnum as HttpRequestMethodsEnum,
-} from '@zd~/request'
+} from '@zdecode/request'
 import { getTokenCookie, removeTokenCookie } from '~/utils/cookie'
 
 export interface CustomConfig {

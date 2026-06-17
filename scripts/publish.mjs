@@ -15,7 +15,7 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
 
 exec('pnpm', [
   '-F',
-  '@zd~/request',
+  '@zdecode/request',
   'publish',
   '--access',
   'public',
