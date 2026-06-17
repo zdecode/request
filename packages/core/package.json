@@ -85,7 +85,8 @@
   "files": [
     "dist/*",
     "index.js",
-    "scripts/*"
+    "scripts/*",
+    "src/*"
   ],
   "scripts": {
     "bumpp": "bumpp",
