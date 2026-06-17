@@ -11,6 +11,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^2.27.3
         version: 2.27.3(@typescript-eslint/utils@8.4.0(eslint@9.5.0)(typescript@6.0.3))(@unocss/eslint-plugin@0.60.4(eslint@9.5.0)(typescript@6.0.3))(@vue/compiler-sfc@3.4.38)(eslint-plugin-format@0.1.2(eslint@9.5.0))(eslint@9.5.0)(typescript@6.0.3)(vitest@2.1.8(@types/node@20.16.3)(jsdom@24.1.3)(sass@1.77.8)(terser@5.31.6))
+      '@clack/prompts':
+        specifier: ^1.5.1
+        version: 1.5.1
       '@dcloudio/types':
         specifier: ^3.4.12
         version: 3.4.12
@@ -29,6 +32,9 @@ importers:
       '@rollup/plugin-typescript':
         specifier: ^11.1.6
         version: 11.1.6(rollup@4.21.2)(tslib@2.8.1)(typescript@6.0.3)
+      '@tarojs/taro':
+        specifier: ^4.0.7
+        version: 4.0.7(@tarojs/components@4.0.7(@tarojs/helper@4.0.7)(postcss@8.5.15)(rollup@4.21.2)(vue@3.4.38(typescript@6.0.3)))(@tarojs/helper@4.0.7)(@tarojs/shared@4.0.7)(postcss@8.5.15)(rollup@4.21.2)(vue@3.4.38(typescript@6.0.3))
       '@vue/compiler-sfc':
         specifier: ^3.4.38
         version: 3.4.38
@@ -44,6 +50,9 @@ importers:
       eslint-plugin-format:
         specifier: ^0.1.2
         version: 0.1.2(eslint@9.5.0)
+      miniprogram-api-typings:
+        specifier: ^3.12.3
+        version: 3.12.3
       picocolors:
         specifier: ^1.1.0
         version: 1.1.0
@@ -63,6 +72,16 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
+  cli-test:
+    dependencies:
+      lodash.merge:
+        specifier: ^4.6.2
+        version: 4.6.2
+    devDependencies:
+      '@types/lodash.merge':
+        specifier: ^4.6.9
+        version: 4.6.9
+
   packages/core:
     dependencies:
       axios:
@@ -71,16 +90,10 @@ importers:
       lodash.merge:
         specifier: ^4.6.2
         version: 4.6.2
-      miniprogram-api-typings:
-        specifier: ^3.12.3
-        version: 3.12.3
       qs:
         specifier: ^6.13.0
         version: 6.13.0
     devDependencies:
-      '@tarojs/taro':
-        specifier: ^4.0.7
-        version: 4.0.7(@tarojs/components@4.0.7(@tarojs/helper@4.0.7)(postcss@8.5.15)(rollup@4.21.2)(vue@3.4.38(typescript@6.0.3)))(@tarojs/helper@4.0.7)(@tarojs/shared@4.0.7)(postcss@8.5.15)(rollup@4.21.2)(vue@3.4.38(typescript@6.0.3))
       '@types/lodash.merge':
         specifier: ^4.6.9
         version: 4.6.9
@@ -240,10 +253,18 @@ packages:
   '@clack/core@0.3.4':
     resolution: {integrity: sha512-H4hxZDXgHtWTwV3RAVenqcC4VbJZNegbBjlPvzOzCouXtS2y3sDvlO3IsbrPNWuLWPPlYVYPghQdSF64683Ldw==}
 
+  '@clack/core@1.4.1':
+    resolution: {integrity: sha512-FILJa1gGKEFTGZAJE9RpVhrjKz3c3h4ar60dSv6cGuDqufQ84YEIS3GAGvZiN+H6yaLbbvTFNejjCC4tXpZEuw==}
+    engines: {node: '>= 20.12.0'}
+
   '@clack/prompts@0.7.0':
     resolution: {integrity: sha512-0MhX9/B4iL6Re04jPrttDm+BsP8y6mS7byuv0BvXgdXhbV5PdlsHt55dvNsuBCPZ7xq1oTAOOuotR9NFbQyMSA==}
     bundledDependencies:
       - is-unicode-supported
+
+  '@clack/prompts@1.5.1':
+    resolution: {integrity: sha512-zccHj2z2oCCO4yrDiRSlFOxWerGqRiysP7a5jPK6uoI9URKAquwY42Dd/iUP8JWHxEzdRe4TlbvZCo8z1/mhrw==}
+    engines: {node: '>= 20.12.0'}
 
   '@csstools/color-helpers@5.1.0':
     resolution: {integrity: sha512-S11EXWJyy0Mz5SYvRmY8nJYTFFd1LCNV+7cXyAgQtOOuzb4EsgfqDufL+9esx72/eLhsRdGZwaldu/h+E4t4BA==}
@@ -1858,6 +1879,15 @@ packages:
   fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
 
+  fast-string-truncated-width@3.0.3:
+    resolution: {integrity: sha512-0jjjIEL6+0jag3l2XWWizO64/aZVtpiGE3t0Zgqxv0DPuxiMjvB3M24fCyhZUO4KomJQPj3LTSUnDP3GpdwC0g==}
+
+  fast-string-width@3.0.2:
+    resolution: {integrity: sha512-gX8LrtNEI5hq8DVUfRQMbr5lpaS4nMIWV+7XEbXk2b8kiQIizgnlr12B4dA3ZEx3308ze0O4Q1R+cHts8kyUJg==}
+
+  fast-wrap-ansi@0.2.2:
+    resolution: {integrity: sha512-7F2Fl+TjRSenLqlU3UjSH0iyqopqoZIu7eZVpEirP2g1GtWa2G/ecEmBdgz31+Mxr+ELclgg6sokpSFIQiZ02Q==}
+
   fastq@1.17.1:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
 
@@ -3441,10 +3471,22 @@ snapshots:
       picocolors: 1.1.0
       sisteransi: 1.0.5
 
+  '@clack/core@1.4.1':
+    dependencies:
+      fast-wrap-ansi: 0.2.2
+      sisteransi: 1.0.5
+
   '@clack/prompts@0.7.0':
     dependencies:
       '@clack/core': 0.3.4
       picocolors: 1.1.0
+      sisteransi: 1.0.5
+
+  '@clack/prompts@1.5.1':
+    dependencies:
+      '@clack/core': 1.4.1
+      fast-string-width: 3.0.2
+      fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
   '@csstools/color-helpers@5.1.0':
@@ -4020,7 +4062,7 @@ snapshots:
   '@tarojs/runtime@4.0.7':
     dependencies:
       '@tarojs/shared': 4.0.7
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   '@tarojs/shared@4.0.7': {}
 
@@ -4080,7 +4122,7 @@ snapshots:
   '@types/postcss-url@10.0.4':
     dependencies:
       '@types/node': 20.16.3
-      postcss: 8.4.44
+      postcss: 8.5.15
 
   '@types/qs@6.9.15': {}
 
@@ -5137,6 +5179,16 @@ snapshots:
   fast-json-stable-stringify@2.1.0: {}
 
   fast-levenshtein@2.0.6: {}
+
+  fast-string-truncated-width@3.0.3: {}
+
+  fast-string-width@3.0.2:
+    dependencies:
+      fast-string-truncated-width: 3.0.3
+
+  fast-wrap-ansi@0.2.2:
+    dependencies:
+      fast-string-width: 3.0.2
 
   fastq@1.17.1:
     dependencies:

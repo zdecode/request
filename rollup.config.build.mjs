@@ -9,6 +9,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
 import { exec } from './scripts/exec.mjs'
+import { inlineTemplates } from './scripts/inline-templates.mjs'
 
 function main() {
   return defineConfig([
@@ -83,6 +84,37 @@ function main() {
             }
           },
         },
+      ],
+    },
+    {
+      input: 'packages/core/src/cli.ts',
+      output: {
+        file: 'packages/core/dist/cli.cjs.js',
+        format: 'cjs',
+        banner: '#!/usr/bin/env node',
+      },
+      external: [
+        'fs',
+        'path',
+        'os',
+        'process',
+        'child_process',
+        'url',
+        'buffer',
+        'stream',
+        'util',
+        /^node:/,
+      ],
+      plugins: [
+        inlineTemplates(),
+        typescript({
+          tsconfig: './packages/core/tsconfig.json',
+          declaration: false,
+          noCheck: true,
+        }),
+        nodeResolve({ preferBuiltins: true }),
+        commonjs(),
+        json(),
       ],
     },
   ])

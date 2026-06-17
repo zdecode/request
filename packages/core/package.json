@@ -94,11 +94,9 @@
   "dependencies": {
     "axios": "^1.7.7",
     "lodash.merge": "^4.6.2",
-    "miniprogram-api-typings": "^3.12.3",
     "qs": "^6.13.0"
   },
   "devDependencies": {
-    "@tarojs/taro": "^4.0.7",
     "@types/lodash.merge": "^4.6.9",
     "@types/qs": "^6.9.15"
   }
